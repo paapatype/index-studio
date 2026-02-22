@@ -442,6 +442,7 @@ input, select, textarea {
 
 .hero-content {
   max-width: 800px;
+  margin: 0 auto;
 }
 
 .hero-headline {
