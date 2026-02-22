@@ -299,7 +299,7 @@ input, select, textarea {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 100;
   height: var(--header-height);
   display: flex;
   align-items: center;
@@ -330,6 +330,12 @@ input, select, textarea {
   display: flex;
   align-items: center;
   gap: var(--spacing-lg);
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: var(--header-height);
+  z-index: 101;
+  padding-right: var(--spacing-lg);
 }
 
 .nav-link {
@@ -352,7 +358,8 @@ input, select, textarea {
   flex-direction: column;
   gap: 5px;
   padding: 4px;
-  z-index: 1002;
+  z-index: 201;
+  position: relative;
 }
 
 .hamburger span {
@@ -365,14 +372,16 @@ input, select, textarea {
 }
 
 /* Mobile nav */
+.nav-overlay {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
   }
 
   .nav {
-    position: fixed;
-    top: 0;
     right: -100%;
     width: 80%;
     max-width: 320px;
@@ -384,7 +393,7 @@ input, select, textarea {
     box-shadow: var(--shadow-lg);
     transition: right var(--transition);
     gap: var(--spacing-sm);
-    z-index: 1001;
+    z-index: 200;
   }
 
   .nav-link {
@@ -417,11 +426,10 @@ input, select, textarea {
   }
 
   .nav-overlay {
-    display: none;
     position: fixed;
     inset: 0;
     background: rgba(0,0,0,0.4);
-    z-index: 1000;
+    z-index: 150;
   }
 
   body.nav-open .nav-overlay {
