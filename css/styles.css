@@ -352,7 +352,7 @@ input, select, textarea {
   flex-direction: column;
   gap: 5px;
   padding: 4px;
-  z-index: 1001;
+  z-index: 1002;
 }
 
 .hamburger span {
@@ -384,6 +384,7 @@ input, select, textarea {
     box-shadow: var(--shadow-lg);
     transition: right var(--transition);
     gap: var(--spacing-sm);
+    z-index: 1001;
   }
 
   .nav-link {
@@ -420,7 +421,7 @@ input, select, textarea {
     position: fixed;
     inset: 0;
     background: rgba(0,0,0,0.4);
-    z-index: 999;
+    z-index: 1000;
   }
 
   body.nav-open .nav-overlay {
